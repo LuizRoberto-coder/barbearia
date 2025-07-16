@@ -67,7 +67,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        <script>
+        
     // Form submission
     document.getElementById('agendamentoForm').addEventListener('submit', function(e) {
         e.preventDefault();
