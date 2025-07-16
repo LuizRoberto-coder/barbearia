@@ -48,9 +48,9 @@
                 return;
             }
             
-            // Create confirmation message
-            let mensagem = `✅ Agendamento Confirmado!\n\n`;
-            mensagem += `Nome: ${nome}\n`;
+             Create confirmation message
+           let mensagem = `✅ Agendamento Confirmado!\n\n`;
+           mensagem += `Nome: ${nome}\n`;
             mensagem += `Serviço: ${servico}\n`;
             if (barbeiro) mensagem += `Barbeiro: ${barbeiro}\n`;
             mensagem += `Data: ${data}\n`;
@@ -69,21 +69,7 @@
 
         
     // Form submission
-    document.getElementById('agendamentoForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const nome = document.getElementById('nome').value;
-        const servico = document.getElementById('selectServico').value;
-        const barbeiro = document.getElementById('selectBarbeiro').value || 'Qualquer barbeiro';
-        const data = document.getElementById('inputData').value;
-        const hora = document.getElementById('inputHora').value;
-        
-        // Simple validation
-        if (!nome || !servico || !data || !hora) {
-            alert('Por favor, preencha todos os campos obrigatórios.');
-            return;
-        }
+    
         
         // Create WhatsApp message
         let mensagem = `*AGENDAMENTO BARBEARIA MODERNA*%0A%0A`;
