@@ -11,7 +11,6 @@
             ]
         });
 
-         // Se quiser incluir também o locale em português
     document.addEventListener("DOMContentLoaded", function() {
         flatpickr.localize(flatpickr.l10ns.pt);
     });
@@ -34,7 +33,6 @@
                 
                 document.getElementById('selectServico').value = `${serviceName} - R$${servicePrice}`;
                 
-                // Scroll suave para o formulário
                 document.getElementById('agendar').scrollIntoView({
                     behavior: 'smooth'
                 });
@@ -60,16 +58,13 @@
             const mensagem = `*NOVO AGENDAMENTO*%0A%0A*Nome:* ${nome}%0A*Serviço:* ${servico}%0A*Barbeiro:* ${barbeiro || 'Qualquer barbeiro'}%0A*Data:* ${data}%0A*Horário:* ${hora}`;
             
             // Abre o WhatsApp
-            window.open(`https://wa.me/5511999999999?text=${mensagem}`, '_blank');
+            window.open(`https://wa.me/5582996148084?text=${mensagem}`, '_blank');
             
-            // Reseta o formulário
             this.reset();
             
-            // Feedback para o usuário
             alert('Agora você será redirecionado para o WhatsApp para confirmar seu agendamento!');
         });
 
-        // Suaviza o scroll para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -83,7 +78,6 @@
                         behavior: 'smooth'
                     });
                     
-                    // Atualiza a URL sem recarregar a página
                     history.pushState(null, null, targetId);
                 }
             });
