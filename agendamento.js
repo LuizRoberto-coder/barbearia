@@ -372,6 +372,9 @@ function setupEventListeners() {
 }
 
 function initializeApp() {
+    // Adiciona margem inferior ao conteúdo principal
+    document.querySelector('.container').classList.add('main-content');
+    
     populateDateGrid();
     updateProgressBar();
     updateStepContent();
